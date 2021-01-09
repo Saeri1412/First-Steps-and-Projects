@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.header {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+}
+
+#logo {
+    position: absolute;
+    height: 30px;
+    width: 150px;
+    left: 10px;
+    top: 10px;
+    margin: 10px;
+}
+
+#menu {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    top: 5px;
+    margin: 10px;
+}
+
+.main {
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    color: white;
+    font-size: 50px;
+    left: 320px;
+    top: 35%;
+}
+
+h2 {
+    position: absolute;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 30px;
+    color: rgb(255, 187, 0);
+    border: 5px solid rgb(255, 187, 0);
+    background-color: yellow;
+    border-radius: 25px;
+    padding: 5px 50px;
+    left: 520px;
+    top: 45%;
+}
