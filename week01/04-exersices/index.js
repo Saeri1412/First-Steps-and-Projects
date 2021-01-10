@@ -19,7 +19,9 @@ Note that you have no way to test the final case.
 The only thing that could make "I have no idea!" appear is a symbol, and we have not yet discussed how to make one of those. */
 
 function logType(i) {
-    if (typeof i === "number") {
+    if (Number.isNaN(i)) {
+        console.log("not a number!");
+    } else if (typeof i === "number") {
         console.log("number!");
     } else if (typeof i === "string") {
         console.log("string!");
@@ -27,24 +29,24 @@ function logType(i) {
         console.log("boolean!");
     } else if (typeof i === "bigint") {
         console.log("bigint");
+    } else if (Array.isArray(i)) {
+        console.log("array!");
     } else if (typeof i === "object") {
         console.log("object!");
     } else if (typeof i === "function") {
         console.log("function");
-    } else if ((i === null) === true) {
+    } else if (i === null) {
         console.log("null!");
     } else if (typeof i === "undefined") {
         console.log("undefined!");
-    } else if (Array.isArray([i]) === true) {
+    } else if (Array.isArray(i)) {
         console.log("array!");
-    } else if (isNaN(i) === true && Number.isNaN(i) === true) {
-        console.log("not a number!");
     } else {
         console.log("I have no idea!");
     }
 }
 
-logType();
+logType(null);
 
 // 2. Copy the following link into your code:
 var a = {
@@ -68,10 +70,19 @@ var a = {
 /*for (var b in a) {
     console.log("The property of " + b + " is " + a[b]);
 }*/
+var b = {};
 
-for (var b in a) {
+/*for (var b in a) {
     console.log(a[b] + ": " + '"' + b + '"' + ",");
+}*/
+
+var b = {};
+
+for (var property in a) {
+    b[a[property]] = property;
 }
+
+console.log(b);
 
 /* 3. Write a while or for loop that counts down from 10 to 1, logging each number to the console. */
 
