@@ -39,8 +39,6 @@ function logType(i) {
         console.log("null!");
     } else if (typeof i === "undefined") {
         console.log("undefined!");
-    } else if (Array.isArray(i)) {
-        console.log("array!");
     } else {
         console.log("I have no idea!");
     }
