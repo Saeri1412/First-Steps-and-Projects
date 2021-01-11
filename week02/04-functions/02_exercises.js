@@ -27,3 +27,24 @@ function sum() {
     }
 }
 console.log(sum(5, 10));
+
+/* 2. 
+Write a function that takes another function as an argument. 
+It should wait 1.5 seconds and then run the function that was passed in.*/
+
+function waitThenRun() {
+    console.log("Goodbye!");
+}
+
+setTimeout(waitThenRun, 1500);
+
+setTimeout(function () {
+    console.log("Hello!");
+}, 1500);
+
+/*waitThenRun(function() {
+     console.log('Hello!');
+     waitThenRun(function() {
+         console.log('Goodbye!');
+     }); // logs 'Goodbye!' 1.5 seconds later
+ }); // logs 'Hello!' 1.5 seconds later */
