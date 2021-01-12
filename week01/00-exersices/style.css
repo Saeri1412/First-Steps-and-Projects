@@ -30,21 +30,23 @@ header img:last-child {
     margin: 0;
 }
 
-.hero h1 {
+.hero div {
     position: absolute;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.hero h1 {
     font-family: "Times New Roman", Times, serif;
     font-style: italic;
     color: white;
     font-size: 40px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
     transition: all 1s;
 }
 
 .hero button {
-    position: absolute;
     font-family: "Times New Roman", Times, serif;
     font-style: italic;
     font-size: 30px;
@@ -53,10 +55,6 @@ header img:last-child {
     background-color: yellow;
     border-radius: 25px;
     padding: 5px 50px;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
     transition: all 1s;
 }
 
