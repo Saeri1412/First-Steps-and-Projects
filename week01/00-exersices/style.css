@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 3000px;
+}
+
+header {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    height: 50px;
+}
+
+#logo {
+    position: absolute;
+    height: 30px;
+    width: 150px;
+    left: 10px;
+    top: 10px;
+    margin: 10px;
+}
+
+#menu {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    top: 5px;
+    margin: 10px;
+}
+
+.hero {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    position: absolute;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    color: white;
+    font-size: 40px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#center-button {
+    position: absolute;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 30px;
+    color: rgb(255, 187, 0);
+    border: 5px solid rgb(255, 187, 0);
+    background-color: yellow;
+    border-radius: 25px;
+    padding: 5px 50px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#spices {
+    max-width: 100%;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    background-color: silver;
+    position: relative;
+    height: 300px;
+    margin: 0;
+}
+
+h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    display: inline-block;
+    margin: 0;
+}
+
+p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+.infosleftsidetop {
+    position: absolute;
+    left: 250px;
+    top: 50px;
+    display: inline-block;
+}
+
+.infosleftsidebottom {
+    position: absolute;
+    left: 250px;
+    top: 150px;
+}
+
+.infosrightsidetop {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}
+
+.infosrightsidebottom {
+    position: absolute;
+    right: 320px;
+    top: 150px;
+}
+
+#cat {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 200px;
+    top: 55px;
+}
+
+#swim {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 200px;
+    top: 160px;
+}
+
+#columns {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 700px;
+    top: 160px;
+}
+
+#world {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 700px;
+    top: 55px;
+}
+
+#center-button:hover {
+    background-color: limegreen 1s;
+}
