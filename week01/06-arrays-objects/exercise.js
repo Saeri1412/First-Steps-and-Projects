@@ -10,12 +10,18 @@ The property value should be the first parameter passed to the callback and the 
 If the first parameter is an array, it should loop over the array's elements and call the callback for each one. 
 The array element should be the first parameter passed to the callback and the index should be the second. */
 
-/*function each(obj, function (){
-}); 
+function each(objOrArr, isFunction){
+    if (typeof objOrArr === true) {
+        for(var i = 0; i < objOrArr.length; i++) {
+            isFunction(objOrArr.key, key);
+        }
+    } else (Array.isArray(objOrArr) === true){
+        isFunction(obOrArr[i],i); 
+    }
 
-for (var property in obj) {
-    b[function ] = ;
-}
+} 
+
+
 
 console.log()
 
