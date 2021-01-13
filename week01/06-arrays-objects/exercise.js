@@ -11,17 +11,18 @@ If the first parameter is an array, it should loop over the array's elements and
 The array element should be the first parameter passed to the callback and the index should be the second. */
 
 function each(objOrArr, isFunction) {
-    if (typeof objOrArr === "object") {
-        for (var key in objOrArr) {
-            isFunction(objOrArr.key, key);
-        }
-    } else {
-        if (Array.isArray(objOrArr) === true) {
+    if (Array.isArray(objOrArr) === true) {
         for (var i = 0; i < objOrArr.length; i++) {
         isFunction(objOrArr[i], i);
+        }
+
+    } else (typeof objOrArr === "object") {
+        for (var key in objOrArr) {
+            isFunction(objOrArr.key, key);
     }
 }
-
+}
+‚
 each(
     {
         a: 1,
@@ -50,18 +51,20 @@ function reverseOrder(originalArr) {
     var newArray = [];
     for (var i = originalArr.length - 1; i >= 0; i--);
     {
-        newArray = originalArr[i];
+        newArray.push(originalArr[i]);
     }
     return newArray;
 }
 
-console.log(reverseOrder(originalArr));
+console.log(reverseOrder(originalArr)); 
+
+// Another approach would have been to use for loop with normal order and then use unshift 
 
 /*3. 
 Write a function called getLessThanZero that expects an array of numbers 
 to be passed to it and returns a new array containing only those numbers from the array 
-that was passed in that are less than zero.
-*/
+that was passed in that are less than zero.*/
+
 
 //var anotherArray = [-2, -1, 0, 1, 3]
 
