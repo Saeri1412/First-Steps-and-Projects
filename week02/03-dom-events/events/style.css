@@ -1,0 +1,14 @@
+body {
+    background-color: salmon;
+}
+
+#car {
+    width: 500px;
+    display: none; /* hide car by default */
+}
+
+#container {
+    width: 400px;
+    height: 400px;
+    background-color: lavender;
+}

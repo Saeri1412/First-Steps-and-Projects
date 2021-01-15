@@ -1,0 +1,14 @@
+/*body {
+    background-color: salmon;
+}*/
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border: 1px solid salmon;
+}

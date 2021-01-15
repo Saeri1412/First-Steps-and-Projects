@@ -1,0 +1,80 @@
+body {
+    background-color: tomato;
+}
+
+* {
+    box-sizing: border-box; /* dimensions: border & padding are included in those dimensions. */
+}
+
+#stickfigure {
+    text-align: center;
+    position: relative;
+}
+
+#head {
+    border: 3px solid black;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#body {
+    border: 3px solid black;
+    height: 200px;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.arm {
+    border: 3px solid black;
+    height: 150px;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    transform-origin: bottom;
+}
+
+.arm.left {
+    transform: translateX(-50%) rotate(-60deg);
+}
+
+.arm.right {
+    transform: translateX(-50%) rotate(60deg);
+    animation: liftarm 2s infinite;
+}
+
+.leg {
+    border: 3px solid black;
+    height: 200px;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    transform-origin: top;
+    top: 300px;
+}
+
+.leg.left {
+    transform: translateX(-50%) rotate(-30deg);
+}
+
+.leg.right {
+    transform: translateX(-50%) rotate(30deg);
+}
+
+@keyframes liftarm {
+    0% {
+        transform: translateX(-50%) rotate(60deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(100deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(60deg);
+    }
+}
