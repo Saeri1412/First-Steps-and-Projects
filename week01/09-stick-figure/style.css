@@ -1,14 +1,29 @@
 body {
-    background-color: tomato;
+    margin: 0px;
+    overflow: hidden;
 }
 
 * {
     box-sizing: border-box; /* dimensions: border & padding are included in those dimensions. */
 }
 
-#stickfigure {
-    text-align: center;
+.sky {
+    background-color: lightblue;
+    height: 600px;
     position: relative;
+}
+
+.ground {
+    background-color: lightgray;
+    height: 200px;
+    position: relative;
+}
+
+#stickfigure {
+    position: absolute;
+    bottom: 550px;
+    left: 30%;
+    margin: 0;
 }
 
 #head {
@@ -41,7 +56,7 @@ body {
 }
 
 .arm.left {
-    transform: translateX(-50%) rotate(-60deg);
+    transform: translateX(-50%) rotate(220deg);
 }
 
 .arm.right {
@@ -67,6 +82,86 @@ body {
     transform: translateX(-50%) rotate(30deg);
 }
 
+.ball {
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background-color: orange;
+    position: relative;
+    left: 38%;
+    animation: bounce 2s infinite;
+    margin: 0;
+}
+
+#goal {
+    position: absolute;
+    bottom: 600px;
+    right: 20%;
+}
+
+#steg {
+    border: 5px solid black;
+    height: 550px;
+    position: absolute;
+    right: 30%;
+}
+
+#korb {
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    right: 30%;
+    width: 150px;
+    height: 30px;
+}
+
+#sun {
+    border: 2px solid yellow;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    left: 10%;
+    top: 5%;
+    position: relative;
+    background-color: yellow;
+    animation: pulse 2s infinite;
+}
+
+.cloud {
+    height: 60px;
+    width: 180px;
+    background: white;
+    border-radius: 40px;
+    border: 5px solid white;
+    position: relative;
+    top: 0%;
+    left: 60%;
+    animation: movecloud 30s infinite;
+}
+
+.bowbig {
+    height: 80px;
+    width: 80px;
+    background: white;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+}
+
+.bowsmall {
+    height: 50px;
+    width: 50px;
+    background: white;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    bottom: 50%;
+    left: 30%;
+}
+
 @keyframes liftarm {
     0% {
         transform: translateX(-50%) rotate(60deg);
@@ -76,5 +171,44 @@ body {
     }
     100% {
         transform: translateX(-50%) rotate(60deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 0%;
+        transform: translateY(-600px);
+    }
+    50% {
+        height: 60px;
+        width: 90px;
+        transform: translateY(-200px);
+    }
+    100% {
+        top: 0%;
+        transform: translateY(-600px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+@keyframes movecloud {
+    0% {
+        margin-left: 1000px;
+    }
+    100% {
+        margin-left: -1000px;
     }
 }
