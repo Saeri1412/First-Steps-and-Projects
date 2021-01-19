@@ -32,7 +32,6 @@ console.log("SANITY CHECK");
 
     document.addEventListener("transitionend", function (e) {
         if (e.target.classList.contains("exit")) {
-        } else {
             e.target.classList.remove("exit");
         }
 
