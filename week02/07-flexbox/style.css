@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    background-color: hotpink;
+    height: 70px;
+}
+
+main {
+    background-color: lightyellow;
+    flex-grow: 1;
+}
+
+footer {
+    background-color: lightskyblue;
+    height: 30px;
+}

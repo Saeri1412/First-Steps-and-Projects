@@ -87,4 +87,11 @@ console.log("SANITY CHECK");
     ctx.stroke();
 
     console.log(canvas);
+
+
+const canvascontainer = document.getElementById("canvascontainer");
+
+canvas.addEventListener("load", function () {
+    ctx.drawImage(canvas, 600, 500);
+
 })();
