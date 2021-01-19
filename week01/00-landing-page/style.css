@@ -32,10 +32,10 @@ header img:last-child {
 
 .hero div {
     position: absolute;
-    z-index: 1;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
+    text-align: center;
 }
 
 .hero h1 {
@@ -76,7 +76,6 @@ header img:last-child {
     padding-right: 5%;
     transition: all 1s;
 }
-
 
 h3 {
     font-family: "Times New Roman", Times, serif;
@@ -138,13 +137,50 @@ p {
     width: 40px;
 }
 
-.infos img{
+.infos img {
     transition: all 1s;
 }
 
-.infos img:hover{
+.infos img:hover {
     background-color: yellow;
-    transform:scale(1.5); 
+    transform: scale(1.5);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: all 1s;
+}
+
+.side-nav {
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    max-width: 300px;
+    right: 0%;
+}
+
+.side-nav p {
+    padding: 0% 10%;
+    margin-top: 20%;
+}
+
+.side-nav button {
+    margin: 5%;
+    right: 0%;
+    position: absolute;
+}
+
+.overlay.on {
+    transform: translateX(0);
+    visibility: visible;
 }
 
 @media (max-width: 600px) {
@@ -159,7 +195,6 @@ p {
         float: none;
     }
 
-@media (prefers-color-scheme: dark) {
     .hero img {
         filter: brightness(20%);
     }
@@ -170,7 +205,6 @@ p {
 
     .container {
         background-color: rgb(56, 55, 55);
-
     }
 
     .hero h1 {
@@ -178,20 +212,20 @@ p {
     }
 
     .hero button {
-        color: mediumpurple;
+        color: white;
         border: 5px solid indigo;
         background-color: mediumpurple;
     }
-    
+
     h3 {
-    color: tomato;
+        color: tomato;
     }
-    
+
     p {
         color: lightsalmon;
     }
 
-    .infos img:hover{
-        background-color: coral; 
+    .infos img:hover {
+        background-color: coral;
     }
 }
