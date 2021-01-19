@@ -1,0 +1,62 @@
+body {
+    background-color: lightyellow;
+    display: flex;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    margin: 0.5% 0.5%;
+}
+
+.item {
+    height: 50px;
+    width: 50px;
+}
+/* --- 1. Element---*/
+.gray {
+    background-color: gray;
+    justify-content: flex-end;
+}
+
+.orange {
+    background-color: orange;
+}
+
+/* --- 2. Element---*/
+.black {
+    background-color: black;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+/* --- 3. Element---*/
+.blue {
+    background-color: blue;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.green {
+    background-color: green;
+}
+
+/* --- 4. Element---*/
+.purple {
+    background-color: purple;
+    justify-content: flex-start;
+}
+
+.pink {
+    background-color: pink;
+}
