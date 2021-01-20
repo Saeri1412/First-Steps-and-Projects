@@ -7,9 +7,9 @@ body {
 }
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    min-height: 35vh;
-    grid-gap: 10px;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    min-height: 20vw;
+    grid-gap: 3vw;
 }
 
 .container {
