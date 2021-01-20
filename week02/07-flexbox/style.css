@@ -3,25 +3,85 @@
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+    background-color: lightblue;
+    margin: 0;
 }
 
-header {
+.container {
+    padding: 10px;
     background-color: hotpink;
-    height: 70px;
-}
+    height: 800px;
 
-main {
-    background-color: lightyellow;
-    flex-grow: 1;
-    display: flex;
+    display: flex; /* we are now able to use flex-specific properties */
+
+    /* changing the main axis */
+    flex-direction: row; /* default; horizontal is our main axis  */
+    /*flex-direction: column;*/ /* vertical is our main axis */
+
+    /*flex-direction: row-reverse;*/
+    /*flex-direction: column-reverse;*/
+
+    /* change alignment of children on the main axis */
+    /*************************************************/
+    /*justify-content: flex-start; /* default */
     justify-content: center;
+    /*justify-content: flex-end;
+    justify-content: space-around;
+    justify-content: space-evenly;*/
+
+    /* change alignment of children on the cross axis */
+    /*************************************************/
+    /*align-items: stretch; /* default */
+
     align-items: center;
+    /*align-items: flex-start;
+    align-items: flex-end;*/
+
+    flex-wrap: wrap; /* default: nowrap */
 }
 
-footer {
-    background-color: lightskyblue;
-    height: 30px;
+.item {
+    background-color: darkred;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    font-size: 40px;
+
+    flex-basis: 33%; /* default: auto */
+    flex-shrink: 0; /* default: 1 */
+    flex-grow: 0; /* default 0 */
+}
+
+.third {
+    /* change alignment of one flex item on the cross axis */
+    /*align-self: flex-end;*/
+
+    /* change order of flex items on the main axis */
+    /* by default all flex items have a order of 0 */
+    /*order: -1;*/
+    /*order: 2;*/
+}
+
+.first {
+    /*order: 2;*/
+}
+
+.container2 {
+    padding: 10px;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+}
+
+.item2 {
+    background-color: darkred;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    font-size: 40px;
+
+    flex-grow: 1; /* grow to fill remaining space of flex container */
+}
+
+.item2:nth-child(2) {
+    flex-grow: 2;
 }
