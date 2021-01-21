@@ -39,7 +39,7 @@ console.log("SANITY CHECK");
 
                     if (transitioning) {
                         // do nothing
-                    } else if (dots[i]) {
+                    } else if (currentCat[i]) {
                         // do nothing
                     } else {
                         // move to that cat

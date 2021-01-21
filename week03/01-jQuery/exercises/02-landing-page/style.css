@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 3000px;
+}
+
+header {
+    overflow: hidden;
+    padding: 10px;
+}
+
+header img {
+    height: 50px;
+}
+
+header img:first-child {
+    float: left;
+}
+
+header img:last-child {
+    float: right;
+}
+
+.hero {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.hero div {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    color: white;
+    font-size: 40px;
+    transition: all 1s;
+}
+
+.hero button {
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 30px;
+    color: rgb(255, 187, 0);
+    border: 5px solid rgb(255, 187, 0);
+    background-color: yellow;
+    border-radius: 25px;
+    padding: 5px 50px;
+    transition: all 1s;
+}
+
+.hero img {
+    width: 100%;
+    position: relative;
+    filter: brightness(60%);
+    min-height: 400px;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+.container {
+    position: relative;
+    background-color: silver;
+    margin: 0;
+    overflow: hidden;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: all 1s;
+}
+
+h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    display: inline-block;
+    margin: 0;
+}
+
+p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+.infosleftsidetop {
+    float: left;
+}
+
+.infosleftsidebottom {
+    float: left;
+}
+
+.infosrightsidetop {
+    float: right;
+}
+
+.infosrightsidebottom {
+    float: right;
+}
+
+.infos div {
+    display: inline-block;
+    padding: 10px;
+}
+
+.infos {
+    width: 50%;
+    padding: 10px;
+    transition: all 1s;
+}
+
+#cat {
+    height: 40px;
+    width: 40px;
+}
+
+#swim {
+    height: 40px;
+    width: 40px;
+}
+
+#columns {
+    height: 40px;
+    width: 40px;
+}
+
+#world {
+    height: 40px;
+    width: 40px;
+}
+
+.infos img {
+    transition: all 1s;
+}
+
+.infos img:hover {
+    background-color: yellow;
+    transform: scale(1.5);
+}
+
+/*---------------------- OVERLAY ----------------------- */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: all 1s;
+}
+
+.side-nav {
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    max-width: 300px;
+    right: 0%;
+}
+
+.side-nav p {
+    padding: 0% 10%;
+    margin-top: 20%;
+}
+
+.side-nav button {
+    margin: 5%;
+    right: 0%;
+    position: absolute;
+}
+
+.overlay.on {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/*---------------------- POPUP MODULE ----------------------- */
+
+.background {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 2s;
+}
+
+.modal {
+    background-color: white;
+    position: absolute;
+    max-width: 600px;
+    max-height: 300px;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.modal button {
+    margin: 3%;
+    right: 0%;
+    position: absolute;
+}
+
+.popupInfo {
+    padding: 5% 10%;
+}
+/*---------------------- @media ----------------------- */
+
+@media (max-width: 600px) {
+    .infos {
+        width: 100%;
+    }
+
+    .infosleftsidetop,
+    .infosleftsidebottom,
+    .infosrightsidetop,
+    .infosrightsidebottom {
+        float: none;
+    }
+
+    .hero img {
+        filter: brightness(20%);
+    }
+
+    body {
+        background-color: rgb(49, 48, 48);
+    }
+
+    .container {
+        background-color: rgb(56, 55, 55);
+    }
+
+    .hero h1 {
+        color: coral;
+    }
+
+    .hero button {
+        color: white;
+        border: 5px solid indigo;
+        background-color: mediumpurple;
+    }
+
+    h3 {
+        color: tomato;
+    }
+
+    p {
+        color: lightsalmon;
+    }
+
+    .infos img:hover {
+        background-color: coral;
+    }
+}
