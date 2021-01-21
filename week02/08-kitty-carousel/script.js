@@ -104,4 +104,18 @@ console.log("SANITY CHECK");
         clearTimeout(timer);
         moveCats();
     });
+
+    document.addEventListener("touchmove", function (event) {
+        console.log("I swiped to left or right");
+        console.log(event.pageX);
+
+        /* if (event.pageX >=  ) {
+        clearTimeout(timer);
+        moveCats(i++);
+
+        } else {
+        clearTimeout(timer);
+        moveCats(i--);
+        }*/
+    });
 })();
