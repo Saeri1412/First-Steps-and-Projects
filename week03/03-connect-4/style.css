@@ -1,0 +1,38 @@
+body {
+    background-color: lightpink;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.board {
+    display: flex;
+    box-shadow: 4px 4px lightgray;
+}
+
+.slot {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+}
+
+.hole {
+    height: 80px;
+    width: 80px;
+    border: 40px solid lightyellow;
+    transform: translate(-30px, -30px);
+    border-radius: 50%;
+}
+
+.player-1 {
+    background-color: salmon;
+}
+
+.player-2 {
+    background-color: midnightblue;
+}
