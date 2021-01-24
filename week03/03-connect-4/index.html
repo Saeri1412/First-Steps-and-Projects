@@ -8,10 +8,12 @@
     </head>
     <body>
         <header>Welcome To Connect Four</header>
-        <div>
+        <div class="player-administration">
             <p>Enter Name of Players:</p>
-            <textarea class="playername blue"></textarea>
-            <textarea class="playername red"></textarea>
+            <div class="redplayer"></div>
+            <textarea class="playername red">First Player:</textarea>
+            <div class="blueplayer"></div>
+            <textarea class="playername blue">Second Player:</textarea>
         </div>
         <div class="game-container">
             <div class="board">
@@ -157,7 +159,15 @@
                 </div>
             </div>
         </div>
-
+        <button class="resetButton">Reset Game</button>
+        <div class="background">
+            <div class="modal">
+                <button class="closeModal">x</button>
+                <div class="popupInfo">
+                    <h4>Congrat, you won!</h4>
+                </div>
+            </div>
+        </div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="script.js"></script>
     </body>

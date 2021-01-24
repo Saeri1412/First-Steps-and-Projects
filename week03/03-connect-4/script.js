@@ -6,6 +6,12 @@ console.log("SANITY CHECK", $);
 
     var slots = $(".slot");
 
+    var resetButton = $(".resetButton");
+
+    var background = $(".background");
+
+    var closePopup = $(".closeModal");
+
     function switchPlayer() {
         if (currentPlayer === "player-1") {
             currentPlayer = "player-2";
@@ -32,7 +38,6 @@ console.log("SANITY CHECK", $);
 
     //"array of diagonals" approach
     function checkDiagonalVictory() {
-
         for (var j = 0; j < diags.length; j++) {
             var slotsToCheck = [];
             var diag = diags[j];
@@ -113,11 +118,20 @@ console.log("SANITY CHECK", $);
 
         if (victoryInCol || victoryInRow || victoryInDiag) {
             console.log("victory", currentPlayer);
+            background.addClass("on");
         } else {
             switchPlayer();
         }
+    });
 
-        //console.log("col:", col);
-        //console.log("slotsInCol", slotsInCol);
+    $(document).ready(function () {
+        resetButton.click(function () {
+            location.reload();
+        });
+    });
+
+    closePopup.on("click", function () {
+        $(background).fadeOut();
+        console.log("CLICKED THE X-BUTTON");
     });
 })();
