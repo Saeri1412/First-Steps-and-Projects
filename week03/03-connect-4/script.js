@@ -32,7 +32,6 @@ console.log("SANITY CHECK", $);
 
     //"array of diagonals" approach
     function checkDiagonalVictory() {
-        var count = 0;
 
         for (var j = 0; j < diags.length; j++) {
             var slotsToCheck = [];
@@ -40,19 +39,11 @@ console.log("SANITY CHECK", $);
             for (var i = 0; i < diag.length; i++) {
                 slotsToCheck.push(slots.eq(diag[i]));
             }
-            console.log(checkVictory(slotsToCheck));
-
-            if (slots.eq(diag[i]).hasClass(currentPlayer)) {
-                count++;
-
-                if (count === 4) {
-                    return true;
-                }
-            } else {
-                count = 0;
+            if (checkVictory(slotsToCheck)) {
+                return true;
             }
-            return false;
         }
+        return false;
     }
 
     function checkVictory(slots) {
@@ -67,7 +58,7 @@ console.log("SANITY CHECK", $);
             // is slot occupied by currentPlayer?
             if (slot.hasClass(currentPlayer)) {
                 count++;
-
+                console.log(count);
                 // we found 4 consecutive slots occupied by currentPlayer
                 if (count === 4) {
                     return true;

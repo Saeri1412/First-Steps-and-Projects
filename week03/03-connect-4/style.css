@@ -1,5 +1,6 @@
 body {
     background-color: lightpink;
+    overflow: hidden;
 }
 
 .game-container {
@@ -35,4 +36,36 @@ body {
 
 .player-2 {
     background-color: midnightblue;
+}
+
+header {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: wheat;
+}
+
+textarea {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea.red {
+    background-color: salmon;
+    color: white;
+}
+
+textarea.blue {
+    background-color: midnightblue;
+    color: white;
+}
+p {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
