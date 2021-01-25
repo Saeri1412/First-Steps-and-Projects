@@ -1,9 +1,0 @@
-#canvas {
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-}
-
-#canvascontainer {
-    border: 1px solid salmon;
-}
