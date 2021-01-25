@@ -11,9 +11,9 @@
         <div class="player-administration">
             <p>Enter Name of Players:</p>
             <div class="redplayer"></div>
-            <textarea class="playername red">First Player:</textarea>
+            <textarea class="playernameRed">First Player:</textarea>
             <div class="blueplayer"></div>
-            <textarea class="playername blue">Second Player:</textarea>
+            <textarea class="playernameBlue">Second Player:</textarea>
         </div>
         <div class="game-container">
             <div class="board">
@@ -162,12 +162,13 @@
         <button class="resetButton">Reset Game</button>
         <div class="background">
             <div class="modal">
-                <button class="closeModal">x</button>
                 <div class="popupInfo">
-                    <h4>Congrat, you won!</h4>
+                    <h4>Congrats, <span id="name"></span> won!</h4>
                 </div>
+                <button class="closeModal">x</button>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="script.js"></script>
     </body>

@@ -12,6 +12,9 @@ console.log("SANITY CHECK", $);
 
     var closePopup = $(".closeModal");
 
+    var namePlayerRed = $(".playernameRed");
+    var namePlayerBlue = $(".playernameBlue");
+
     function switchPlayer() {
         if (currentPlayer === "player-1") {
             currentPlayer = "player-2";
@@ -118,7 +121,20 @@ console.log("SANITY CHECK", $);
 
         if (victoryInCol || victoryInRow || victoryInDiag) {
             console.log("victory", currentPlayer);
+            if (currentPlayer === "player-1") {
+                var name = namePlayerRed.val();
+                $("#name").html(name);
+            } else {
+                var name2 = namePlayerBlue.val();
+                $("#name").html(name2);
+            }
+
             background.addClass("on");
+            confetti({
+                particleCount: 100,
+                spread: 80,
+                origin: { y: 0.8 },
+            });
         } else {
             switchPlayer();
         }
